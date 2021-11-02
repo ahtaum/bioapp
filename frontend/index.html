@@ -41,32 +41,36 @@
             </div>
         </section>
 
-        <section class="my-3">
+        <section class="my-5">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Nama</th>
-                                    <th scope="col">Jenis Kelamin</th>
-                                    <th scope="col">Kepribadian</th>
-                                    <th scope="col">Status Menikah</th>
-                                    <th scope="col">Tentang</th>
-                                    <th scope="col">Motto</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="hasil in dataApi" :key="hasil.id">
-                                    <td>{{ hasil.nama }}</td>
-                                    <td>{{ hasil.jenis_kelamin }}</td>
-                                    <td>{{ hasil.kepribadian }}</td>
-                                    <td>{{ hasil.menikah }}</td>
-                                    <td>{{ hasil.tentang }}</td>
-                                    <td>{{ hasil.motto }}</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="card shadow-lg p-3 mb-5 bg-body rounded fs-5">
+                            <div class="card-body table-responsive">
+                                <table class="table text-center text-break table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Nama</th>
+                                            <th scope="col">Jenis Kelamin</th>
+                                            <th scope="col">Kepribadian</th>
+                                            <th scope="col">Status Menikah</th>
+                                            <th scope="col">Tentang</th>
+                                            <th scope="col">Motto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="lh-lg">
+                                        <tr v-for="hasil in dataApi" :key="hasil.id">
+                                            <td>{{ hasil.nama }}</td>
+                                            <td>{{ hasil.jenis_kelamin }}</td>
+                                            <td>{{ hasil.kepribadian }}</td>
+                                            <td>{{ hasil.menikah }}</td>
+                                            <td>{{ hasil.tentang }}</td>
+                                            <td>{{ hasil.motto }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
